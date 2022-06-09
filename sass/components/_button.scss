@@ -1,0 +1,23 @@
+.button {
+  display: block;
+  text-align: center;
+  min-width: 200px;
+  padding: 10px 16px;
+  margin: 0 auto;
+  color: var(--hero-color);
+  background-color: var(--accent-color);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.87;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+
+  transition: background-color 250ms var(--cubic-bezier), box-shadow 250ms var(--cubic-bezier);
+
+  &:hover,
+  &:focus {
+    background-color: #188ce8;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+}
