@@ -1,4 +1,16 @@
-
+.work {
+  @include mq(mobile-only) {
+    display: none;
+  }
+  @include mq(tablet-only) {
+    display: none;
+  }
+  &.section {
+    @include mq(desktop) {
+      padding-top: 0;
+    }
+  }
+}
 .work__title {
   margin-bottom: 50px;
   font-size: 36px;
@@ -16,7 +28,8 @@
   position: relative;
   margin-right: 30px;
   &:last-child {
-  margin-right: 0;}
+    margin-right: 0;
+  }
 }
 .work__label {
   display: flex;
