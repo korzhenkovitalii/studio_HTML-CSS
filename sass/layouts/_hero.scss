@@ -1,32 +1,41 @@
 .hero {
-  padding: 200px 0;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 118px 0;
+
   background-color: var(--bgc-hero);
 
   &-overlay {
-    height: 600px;
-    max-width: 1600px;
-    margin: 0 auto;
-
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
       url(../images/baground/baground-hiro.jpg);
-
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     background-color: gray;
+    @include mq(mobile) {
+      height: 400px;
+    }
   }
 
   &__title {
-    width: 696px;
+    max-width: 360px;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 30px;
 
     font-weight: 900;
-    font-size: 44px;
+    font-size: 26px;
     line-height: 1.36;
     letter-spacing: 0.06em;
     text-transform: uppercase;
     text-align: center;
 
     color: var(--hero-color);
+
+    @include mq(desktop){
+      font-size: 44px;
+      max-width: 696px;
+    }
   }
 
   &__backdrop {

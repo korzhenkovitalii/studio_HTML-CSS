@@ -5,7 +5,16 @@
   background: var(--bgc-footer);
 }
 .footer__conteiner {
-  display: flex;
+  @include mq(tablet-only) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  @include mq(desktop) {
+    display: flex;
+    align-items: baseline;
+  }
 }
 .footer__logo-text {
   color: var(--footer-logo-text);
@@ -14,10 +23,19 @@
   margin-bottom: 20px;
 }
 .footer__adress-wrapper {
-  min-width: 231px;
-  margin-right: 70px;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 60px;
+  @include mq(tablet) {
+    margin: 0;
+  }
+  @include mq(desktop) {
+    text-align: start;
+    margin-right: 70px;
+  }
 }
 .footer__address {
+  display: block;
   color: var(--footer-text);
 }
 .footer__contacts {
@@ -26,10 +44,11 @@
 
   &:hover,
   &:focus {
-  color: var(--accent-color);}
+    color: var(--accent-color);
+  }
 }
 .footer__join {
-  color: var(var(--footer-text));
+  color: var(--footer-text);
   text-transform: uppercase;
   margin-bottom: 20px;
 }
@@ -41,34 +60,59 @@
   transition: background-color 250ms var(--cubic-bezier);
 }
 .footer__social {
-  margin-right: 93px;
+  text-align: center;
+  margin-bottom: 60px;
+  @include mq(desktop) {
+    margin-right: 93px;
+    margin-bottom: 0;
+  }
+}
+.footer__subscription {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  @include mq(desktop) {
+    display: block;
+    max-width: 570px;
+  }
 }
 .footer__subscription-title {
   margin-bottom: 20px;
   text-transform: uppercase;
-  text-transform: uppercase;
   color: var(--footer-text);
 }
 .footer__subscription-mail {
-  display: block;
   height: 50px;
-  width: 358px;
+  width: 100%;
   padding: 15px 16px;
-  margin-right: 12px;
+  margin-bottom: 20px;
   outline: none;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
   color: var(--footer-text);
+  @include mq(desktop) {  
+    min-width: 358px;
+    margin: 0;
+  }
 }
 .footer__subscription-form {
-  display: flex;
+  width: 100%;
+  @include mq(desktop) {
+    display: flex;
+    justify-content: end;
+  }
 }
 .footer__subscription-button {
   display: flex;
   justify-content: center;
   align-items: center;
+  @include mq(desktop) {
+    margin: 0 0 0 12px;
+  }
 }
 .footer__subscription-latter {
   margin-left: 10px;

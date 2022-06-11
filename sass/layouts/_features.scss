@@ -5,7 +5,7 @@
   @include mq(mobile) {
     width: 450px;
   }
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     display: flex;
     flex-wrap: wrap;
     width: 738px;
@@ -25,21 +25,18 @@
       margin-bottom: 30px;
     }
   }
-  @include mq(tablet) {
+  @include mq(tablet-only) {
     flex-basis: calc((100% - 4 * 15px) / 2);
     margin: 15px;
   }
-  &:nth-last-child(-n + 2) {
-    @include mq(tablet-only) {
-      margin-bottom: 0;
-    }
-  }
+
   @include mq(desktop) {
-    flex-basis: calc((100% - 90px) / 4);
-    margin: 0 30px 0 0;
-    &:last-child {
-      margin: 0;
-    }
+    flex-basis: calc((100% - 3 * 30px) / 4);
+    margin-right: 30px;
+  }
+  &:last-child {
+    @include mq(desktop){margin-right: 0;}
+    
   }
 }
 .features__icon-box {

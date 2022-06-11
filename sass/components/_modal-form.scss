@@ -1,9 +1,17 @@
 .modal {
   display: block;
-  min-width: 528px;
-  min-height: 531px;
+
   border-radius: 4px;
   background-color: #fff;
+
+  @include mq(mobile) {
+    width: 450px;
+    height: 609px;
+  }
+  @include mq(desktop) {
+    width: 528px;
+    height: 581px;
+  }
 
   position: absolute;
   top: 50%;
