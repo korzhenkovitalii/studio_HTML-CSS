@@ -1,9 +1,13 @@
 .header {
+  position: relative;
   border-bottom: 1px solid #ececec;
 
   &__conteiner {
     display: flex;
     height: 80px;
+    @include mq(mobile-only){
+      justify-content: space-between;
+    }
   }
 }
 
@@ -13,6 +17,9 @@
   padding-bottom: 25px;
 }
 .header__contacts {
+  @include mq(mobile-only){
+    display: none;
+  }
   display: flex;
   align-items: center;
   margin-left: auto;

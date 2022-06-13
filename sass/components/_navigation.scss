@@ -2,6 +2,9 @@
   display: flex;
 }
 .header__nav-list {
+  @include mq(mobile-only){
+    display: none;
+  }
   display: flex;
   align-items: center;
   font-weight: 500;

@@ -1,0 +1,22 @@
+.mobile-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  @include mq(tablet) {
+    display: none;
+  }
+}
+.mobile-button__icon {
+  fill: #212121;
+}
+.mobile-button__icon-close {
+  display: none;
+}
+.mobile-button.is-open .mobile-button__icon-close {
+  display: block;
+}
+.mobile-button.is-open .mobile-button__icon-menu {
+  display: none;
+}
