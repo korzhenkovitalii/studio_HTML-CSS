@@ -628,12 +628,19 @@ img {
   top: 100%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vw;
   padding: 40px;
   background-color: #fff;
   font-weight: 500;
   line-height: 1.17;
   letter-spacing: 0.02em;
+  text-align: left;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
 }
 
 .mobile-menu.is-open {
@@ -644,6 +651,18 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-menu.is-open {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .mobile-menu.is-open ~ .logo-header {
+    opacity: 0;
+  }
 }
 
 .mobile-menu__nav-item {
@@ -700,11 +719,11 @@ img {
 }
 
 .header {
-  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
 .header__conteiner {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -726,13 +745,6 @@ img {
 }
 
 .header__contacts {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: auto;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
@@ -744,15 +756,56 @@ img {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contacts {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-left: auto;
+  }
+}
+
 .header__contacts-item {
-  display: block;
-  padding-top: 32px;
-  padding-bottom: 32px;
   letter-spacing: 0.02em;
-  margin-right: 30px;
   color: var(--primery-text-color);
   -webkit-transition: color 250ms var(--cubic-bezier);
   transition: color 250ms var(--cubic-bezier);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .header__contacts-item {
+    padding: 0;
+    margin-bottom: 10px;
+    text-align: left;
+  }
+  .header__contacts-item:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header__contacts-item {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-right: 30px;
+  }
 }
 
 .header__contacts-item:last-child {
