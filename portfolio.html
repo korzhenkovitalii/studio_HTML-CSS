@@ -11,6 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
+    <!-- Normalize  -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
@@ -26,9 +27,53 @@
     <header class="header">
       <div class="conteiner header__conteiner">
         <nav class="navigation">
+          <!-- Mobile menu  -->
+          <div class="mobile-menu is-open" id="mobile-menu" data-menu>
+            <ul class="mobile-menu__nav">
+              <li class="mobile-menu__nav-item">
+                <a href="./index.html" class="mobile-menu__nav-link">Студия</a>
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a
+                  href="./portfolio.html"
+                  class="mobile-menu__nav-link mobile-menu__nav-link--active"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="mobile-menu__nav-item">
+                <a href="" class="mobile-menu__nav-link">Контакты</a>
+              </li>
+            </ul>
+            <ul class="mobile-menu__contacts">
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__contacts-link" href="tel:+380961111111">+38 096 111 11 11</a>
+              </li>
+              <li class="mobile-menu__contacts-item">
+                <a class="mobile-menu__contacts-link" href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-menu__social">
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link">Instagram</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link">Twitter</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link">Facebook</a>
+              </li>
+              <li class="mobile-menu__social-item">
+                <a href="" class="mobile-menu__social-link">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Logo header  -->
           <a class="logo logo-header" href="./index.html"
             >Web<span class="logo__text">Studio</span></a
           >
+          <!-- Navigation header  -->
           <ul class="header__nav-list">
             <li class="header__nav-item">
               <a href="./index.html" class="header__nav-link">Студия</a>
@@ -41,6 +86,7 @@
             <li class="header__nav-item"><a href="" class="header__nav-link">Контакты</a></li>
           </ul>
         </nav>
+        <!-- Contacts header  -->
         <ul class="header__contacts">
           <li class="header__contacts-item">
             <a class="header__contact-link" href="mailto:info@devstudio.com">
@@ -55,10 +101,29 @@
               <svg class="header__contacts-icon" width="10" height="16">
                 <use href="./images/baground/sprite-icons.svg#phone"></use>
               </svg>
-              +380961111111</a
+              +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <!-- Button mobile-menu  -->
+        <button
+          class="mobile-button is-open"
+          data-menu-button
+          aria-expanded="false"
+          aria-controls="mobile-menu "
+          aria-label="Переключатель мобильного меню"
+        >
+          <svg class="mobile-button__icon" width="40" height="40">
+            <use
+              class="mobile-button__icon-menu"
+              href="./images/baground/sprite-icons.svg#menu-mobile"
+            ></use>
+            <use
+              class="mobile-button__icon-close"
+              href="./images/baground/sprite-icons.svg#close-mobile"
+            ></use>
+          </svg>
+        </button>
       </div>
     </header>
     <!-- Мейн -->
@@ -275,7 +340,7 @@
         </div>
         <div class="footer__social">
           <p class="footer__join">присоединяйтесь</p>
-          <ul class="social__icon-box">
+          <ul class="social">
             <li class="social__icon-item social__icon-item--footer-color">
               <a class="social__icon-link" href="">
                 <svg class="social__icon" width="20" height="20">
@@ -328,5 +393,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
