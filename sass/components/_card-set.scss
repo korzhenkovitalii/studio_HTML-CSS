@@ -1,10 +1,21 @@
 .portfolio-nav {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 30px;
+  @include mq(mobile) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+  @include mq(tablet) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
 }
 .portfolio-nav__item {
   margin-right: 8px;
+  @include mq(mobile) {
+    margin-bottom: 10px;
+  }
 
   &:last-child {
     margin-right: 0;

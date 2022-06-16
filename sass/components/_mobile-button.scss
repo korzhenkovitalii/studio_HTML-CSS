@@ -1,15 +1,21 @@
 .mobile-button {
   display: inline-flex;
+  z-index: 150;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  color: var(--title-text-color);
+  &:hover,
+  &:focus{
+    color: var(--accent-color);
+  }
   @include mq(tablet) {
     display: none;
   }
 }
 .mobile-button__icon {
-  fill: #212121;
+  fill: currentColor;
 }
 .mobile-button__icon-close {
   display: none;
@@ -19,4 +25,5 @@
 }
 .mobile-button.is-open .mobile-button__icon-menu {
   display: none;
+  fill: currentColor;
 }

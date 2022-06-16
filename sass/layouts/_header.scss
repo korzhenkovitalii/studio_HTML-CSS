@@ -1,8 +1,10 @@
 .header {
+  display: block;
+ position: relative;
+  width: 100%;
   border-bottom: 1px solid #ececec;
 
   &__conteiner {
-    position: relative;
     display: flex;
     height: 80px;
     @include mq(mobile-only) {

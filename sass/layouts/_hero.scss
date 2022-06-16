@@ -6,14 +6,33 @@
   background-color: var(--bgc-hero);
 
   &-overlay {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-      url(../images/baground/baground-hiro.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     background-color: gray;
-    @include mq(mobile) {
-      height: 400px;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../../images/hero/hero-img_mob.jpg);
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero/hero-img_mob@2x.jpg);
+    }
+
+    @include mq(tablet) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero/hero-img_tabl.jpg);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../../images/hero/hero-img_tabl@2x.jpg);
+      }
+    }
+    @include mq(desktop) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../../images/hero/hero-img_desk.jpg);
+      @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+          url(../../images/hero/hero-img_desk@2x.jpg);
+      }
     }
   }
 
@@ -32,7 +51,7 @@
 
     color: var(--hero-color);
 
-    @include mq(desktop){
+    @include mq(desktop) {
       font-size: 44px;
       max-width: 696px;
     }
