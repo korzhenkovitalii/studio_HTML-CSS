@@ -660,20 +660,19 @@ img {
 }
 
 .mobile-button__icon {
-  fill: currentColor;
+  color: currentColor;
 }
 
 .mobile-button__icon-close {
   display: none;
 }
 
-.mobile-button.is-open .mobile-button__icon-close {
-  display: block;
+.mobile-menu.is-open .mobile-button__icon-menu {
+  display: none;
 }
 
-.mobile-button.is-open .mobile-button__icon-menu {
-  display: none;
-  fill: currentColor;
+.mobile-menu.is-open .mobile-button__icon-close {
+  display: block;
 }
 
 .mobile-menu {
@@ -1565,7 +1564,6 @@ img {
 }
 
 .footer__subscription-mail {
-  min-width: 358px;
   height: 50px;
   width: 100%;
   padding: 15px 16px;
@@ -1577,6 +1575,12 @@ img {
   border-radius: 4px;
   background-color: inherit;
   color: var(--footer-text);
+}
+
+@media screen and (min-width: 1200px) {
+  .footer__subscription-mail {
+    min-width: 358px;
+  }
 }
 
 .footer__subscription-button {

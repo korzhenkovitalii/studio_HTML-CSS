@@ -105,7 +105,6 @@
 }
 
 .footer__subscription-mail {
-  min-width: 358px;
   height: 50px;
   width: 100%;
   padding: 15px 16px;
@@ -116,6 +115,9 @@
   border-radius: 4px;
   background-color: inherit;
   color: var(--footer-text);
+  @include mq(desktop) {
+    min-width: 358px;
+  }
 }
 
 .footer__subscription-button {

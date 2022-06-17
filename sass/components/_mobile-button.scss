@@ -13,17 +13,16 @@
   @include mq(tablet) {
     display: none;
   }
+  &__icon{
+    color: currentColor;
+  }
+  &__icon-close{
+    display: none;
+  }
 }
-.mobile-button__icon {
-  fill: currentColor;
-}
-.mobile-button__icon-close {
+.mobile-menu.is-open .mobile-button__icon-menu{
   display: none;
 }
-.mobile-button.is-open .mobile-button__icon-close {
+.mobile-menu.is-open .mobile-button__icon-close{
   display: block;
-}
-.mobile-button.is-open .mobile-button__icon-menu {
-  display: none;
-  fill: currentColor;
 }
