@@ -8,7 +8,7 @@
   @include mq(tablet-only) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: flex-start;
   }
   @include mq(desktop) {
@@ -26,16 +26,16 @@
   margin: 0 auto;
   text-align: center;
   margin-bottom: 60px;
-  @include mq(tablet) {
-    margin: 0;
+  @include mq(tablet-only) {
+    margin-bottom: 60px;
+    flex-basis: 50%;
   }
   @include mq(desktop) {
     text-align: start;
-    margin-right: 70px;
+    margin: 0 70px 0 0;
   }
 }
 .footer__address {
-  display: block;
   color: var(--footer-text);
 }
 .footer__contacts {
@@ -62,8 +62,11 @@
 .footer__social {
   text-align: center;
   margin-bottom: 60px;
+  @include mq(tablet-only) {
+    flex-basis: 50%;
+    margin-bottom: 0;
+  }
   @include mq(desktop) {
-    margin-right: 93px;
     margin-bottom: 0;
   }
 }
@@ -72,10 +75,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  @include mq(tablet-only) {
+    flex-basis: 100%;
+    margin: 0;
+  }
   @include mq(desktop) {
     display: block;
-    max-width: 570px;
+    margin-left: auto;
   }
 }
 .footer__subscription-title {
@@ -83,7 +89,23 @@
   text-transform: uppercase;
   color: var(--footer-text);
 }
+
+.footer__subscription-form {
+  @include mq(not-desktop) {
+    width: 100%;
+    max-width: 450px;
+  }
+  @include mq(tablet-only) {
+    width: 100%;
+  }
+  @include mq(desktop) {
+    display: flex;
+    justify-content: end;
+  }
+}
+
 .footer__subscription-mail {
+  min-width: 358px;
   height: 50px;
   width: 100%;
   padding: 15px 16px;
@@ -94,24 +116,12 @@
   border-radius: 4px;
   background-color: inherit;
   color: var(--footer-text);
-  @include mq(desktop) {  
-    min-width: 358px;
-    margin: 0;
-  }
 }
-.footer__subscription-form {
-  width: 100%;
-  @include mq(desktop) {
-    display: flex;
-    justify-content: end;
-  }
-}
+
 .footer__subscription-button {
   display: flex;
-  justify-content: center;
-  align-items: center;
   @include mq(desktop) {
-    margin: 0 0 0 12px;
+    margin-left: 12px;
   }
 }
 .footer__subscription-latter {

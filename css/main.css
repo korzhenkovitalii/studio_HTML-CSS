@@ -6,6 +6,7 @@
   --bgc-footer: rgba(47, 48, 58, 1);
   --footer-text:rgba(255, 255, 255, 1);
   --footer-contact-color: rgba(255, 255, 255, 0.6);
+  --footer-logo-text:#fff;
   --primery-text-color: rgba(117, 117, 117, 1);
   --secondary-text-color:rgba(255, 255, 255, 1);
   --bgc-hero-footer: rgba(47, 48, 58, 1);
@@ -14,6 +15,7 @@
   --button-portfolio: rgba(245, 244, 250, 1);
   --page-color: #ffffff;
   --cubic-bezier: cubic-bezier(0.4, 0, 0.2, 1);
+  --portfolio-card_set-title:rgba(33, 33, 33, 1);
 }
 
 .visibility-hidden {
@@ -534,21 +536,19 @@ img {
   background-color: var(--accent-color);
 }
 
-@media screen and (min-width: 480px) {
-  .portfolio-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: start;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-bottom: 30px;
-  }
+.portfolio-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 40px;
 }
 
 @media screen and (min-width: 768px) {
@@ -562,12 +562,7 @@ img {
 
 .portfolio-nav__item {
   margin-right: 8px;
-}
-
-@media screen and (min-width: 480px) {
-  .portfolio-nav__item {
-    margin-bottom: 10px;
-  }
+  margin-bottom: 15px;
 }
 
 .portfolio-nav__item:last-child {
@@ -891,6 +886,13 @@ img {
   margin: 0 auto;
   padding: 118px 0;
   background-color: var(--bgc-hero);
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
 }
 
 .hero-overlay {
@@ -1359,14 +1361,9 @@ img {
   color: #afb1b8;
   -webkit-transition: color 250ms var(--cubic-bezier), border-color 250ms var(--cubic-bezier);
   transition: color 250ms var(--cubic-bezier), border-color 250ms var(--cubic-bezier);
-}
-
-@media screen and (min-width: 480px) {
-  .clients__item {
-    -ms-flex-preferred-size: calc((100% - 4 * 15px) / 2);
-        flex-basis: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
-  }
+  -ms-flex-preferred-size: calc((100% - 4 * 15px) / 2);
+      flex-basis: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -1412,9 +1409,8 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
@@ -1446,21 +1442,22 @@ img {
   margin-bottom: 60px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
   .footer__adress-wrapper {
-    margin: 0;
+    margin-bottom: 60px;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .footer__adress-wrapper {
     text-align: start;
-    margin-right: 70px;
+    margin: 0 70px 0 0;
   }
 }
 
 .footer__address {
-  display: block;
   color: var(--footer-text);
 }
 
@@ -1492,9 +1489,16 @@ img {
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .footer__social {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .footer__social {
-    margin-right: 93px;
     margin-bottom: 0;
   }
 }
@@ -1513,13 +1517,20 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .footer__subscription {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    margin: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
   .footer__subscription {
     display: block;
-    max-width: 570px;
+    margin-left: auto;
   }
 }
 
@@ -1529,29 +1540,17 @@ img {
   color: var(--footer-text);
 }
 
-.footer__subscription-mail {
-  height: 50px;
-  width: 100%;
-  padding: 15px 16px;
-  margin-bottom: 20px;
-  outline: none;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-  border-radius: 4px;
-  background-color: inherit;
-  color: var(--footer-text);
-}
-
-@media screen and (min-width: 1200px) {
-  .footer__subscription-mail {
-    min-width: 358px;
-    margin: 0;
+@media screen and (max-width: 1199.98px) {
+  .footer__subscription-form {
+    width: 100%;
+    max-width: 450px;
   }
 }
 
-.footer__subscription-form {
-  width: 100%;
+@media screen and (min-width: 768px) and (max-width: 1199.98px) {
+  .footer__subscription-form {
+    width: 100%;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -1565,21 +1564,30 @@ img {
   }
 }
 
+.footer__subscription-mail {
+  min-width: 358px;
+  height: 50px;
+  width: 100%;
+  padding: 15px 16px;
+  margin-bottom: 20px;
+  outline: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+          filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: inherit;
+  color: var(--footer-text);
+}
+
 .footer__subscription-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
   .footer__subscription-button {
-    margin: 0 0 0 12px;
+    margin-left: 12px;
   }
 }
 
@@ -1618,6 +1626,7 @@ img {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
+  color: var(--portfolio-card_set-title);
 }
 
 .card-set__text {

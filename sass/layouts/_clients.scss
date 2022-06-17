@@ -36,10 +36,8 @@
 
   transition: color 250ms var(--cubic-bezier), border-color 250ms var(--cubic-bezier);
 
-  @include mq(mobile) {
-    flex-basis: calc((100% - 4 * 15px) / 2);
-    margin: 15px;
-  }
+  flex-basis: calc((100% - 4 * 15px) / 2);
+  margin: 15px;
 
   @include mq(tablet) {
     flex-basis: calc((100% - 6 * 15px) / 3);

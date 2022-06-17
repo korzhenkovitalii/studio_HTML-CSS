@@ -5,6 +5,10 @@
 
   background-color: var(--bgc-hero);
 
+  @include mq(desktop) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
   &-overlay {
     background-size: cover;
     background-position: center;
