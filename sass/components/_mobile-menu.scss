@@ -15,7 +15,6 @@
       left: 0;
       width: 100%;
       height: 100%;
-      overflow-y: scroll;
 
       padding: 48px 40px;
 
@@ -66,14 +65,15 @@
   color: #2196f3;
 }
 .mobile-menu__social-item {
-  margin: 0 10px 0;
+  padding: 0 10px 0;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
   &:first-child {
-    margin-left: 0;
+    padding-left: 0;
   }
   &:last-child {
-    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
   }
 }
 .mobile-menu__social-link {
-  padding: 10px 0 10px;
 }
