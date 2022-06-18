@@ -122,6 +122,8 @@
 
 .footer__subscription-button {
   display: flex;
+  justify-content: center;
+  align-items: center;
   @include mq(desktop) {
     margin-left: 12px;
   }

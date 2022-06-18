@@ -75,9 +75,9 @@
   margin-right: 20px;
   position: relative;
 }
-.mobile-social__link{
-    &::after {
-    content: "";
+.mobile-social__link {
+  &::after {
+    content: '';
     position: absolute;
     right: -10px;
     bottom: 0;
@@ -86,4 +86,7 @@
     width: 1px;
     background-color: rgba(33, 33, 33, 0.2);
   }
+}
+.mobile-social__item:last-child .mobile-social__link::after {
+  display: none;
 }

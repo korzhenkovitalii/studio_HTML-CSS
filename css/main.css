@@ -758,7 +758,7 @@ img {
 }
 
 .mobile-social__link::after {
-  content: "";
+  content: '';
   position: absolute;
   right: -10px;
   bottom: 0;
@@ -766,6 +766,10 @@ img {
   height: 100%;
   width: 1px;
   background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mobile-social__item:last-child .mobile-social__link::after {
+  display: none;
 }
 
 .header {
@@ -1589,6 +1593,12 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 @media screen and (min-width: 1200px) {
