@@ -3,18 +3,13 @@
   border-radius: 4px;
   background-color: #fff;
 
-  @include mq(mobile) {
+  @include mq(not-desktop) {
     width: 450px;
-    height: 609px;
   }
-  @include mq(desktop) {
-    width: 528px;
-    height: 581px;
-  }
-
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 528px;
   transform: translate(-50%, -50%) scale(0.9);
   transition: transform 250ms var(--cubic-bezier);
 }

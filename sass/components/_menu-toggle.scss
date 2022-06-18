@@ -1,0 +1,26 @@
+.menu-toggle {
+  min-height: 40px;
+  min-width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+  z-index: 150;
+  border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    fill: var(--accent-color);
+  }
+
+  @include mq(tablet){
+    display: none;
+  }
+}
+.mobile-toggle__icon {
+  color: currentColor;
+}
